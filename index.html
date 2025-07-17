@@ -17,7 +17,7 @@
                 .then(data => {
                     const streamInfo = data.find(item => item.id === streamId);
                     const iframe = document.getElementById('stream-iframe');
-                    if (streamInfo.url && streamInfo.key) {
+                    if (streamInfo.keyId && streamInfo.key) {
                     const key= encodeURIComponent(streamInfo.name);
                       const key1= encodeURIComponent(streamInfo.keyId);                             
 const key2= encodeURIComponent(streamInfo.key);                             
