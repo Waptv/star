@@ -21,11 +21,14 @@
                     const key= encodeURIComponent(streamInfo.name);
                       const key1= encodeURIComponent(streamInfo.keyId);                             
 const key2= encodeURIComponent(streamInfo.key);  
-                                        
+                let str = streamInfo.name;
+let result = str.split(" ").map(word => word.replace(" ", "_")).join("_");
+console.log(result);
+                                               
                                  
   
                      
- iframe.src =`https://live4wap.github.io/star?name=${key}&keyId=${key1}&key=${key2}`;
+ iframe.src =`https://live4wap.github.io/star?name=${result}&keyId=${key1}&key=${key2}`;
                     } 
                 });
         });
