@@ -20,9 +20,13 @@
                     if (streamInfo.keyId && streamInfo.key) {
                     const key= encodeURIComponent(streamInfo.name);
                       const key1= encodeURIComponent(streamInfo.keyId);                             
-const key2= encodeURIComponent(streamInfo.key);                             
+const key2= encodeURIComponent(streamInfo.key);  me);
+                                        
+                        const [n1, n2] = streamInfo.name.split('&nbsp;'); 
+                                 
+  
                      
- iframe.src =`https://live4wap.github.io/star?name=${key}&keyId=${key1}&key=${key2}`;
+ iframe.src =`https://live4wap.github.io/star?name=${n1}_${n2}&keyId=${key1}&key=${key2}`;
                     } 
                 });
         });
