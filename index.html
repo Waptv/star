@@ -19,8 +19,8 @@
                     const iframe = document.getElementById('stream-iframe');
                     if (streamInfo.url && streamInfo.key) {
                     const key= encodeURIComponent(streamInfo.name);
-                      const keyId= encodeURIComponent(streamInfo.id);                             const [key1, key2] = streamInfo.key.split(':'); 
-
+                      const key1= encodeURIComponent(streamInfo.keyId);                             
+const key2= encodeURIComponent(streamInfo.key);                             
                      
  iframe.src =`https://live4wap.github.io/star?name=${key}&keyId=${key1}&key=${key2}`;
                     } 
